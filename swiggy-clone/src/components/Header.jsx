@@ -34,19 +34,19 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full p-4 shadow-lg bg-white">
+    <header className="w-full p-4 shadow-lg bg-white fixed top-0 left-0 right-0 z-50">
       <div className="max-w-[1080px] mx-auto flex items-center justify-between">
         {/* Overlay for side navigation */}
         {toggle && (
           <div
             onClick={hideSideNav}
-            className="fixed inset-0 bg-black bg-opacity-50 z-10 duration-300"
+            className="fixed inset-0 bg-black bg-opacity-50 z-40 duration-300"
           ></div>
         )}
 
         {/* Side Navigation */}
         <div
-          className={`fixed top-0 left-0 w-[75%] md:w-[40%] h-full bg-white z-20 transform transition-transform duration-700 ${
+          className={`fixed top-0 left-0 w-[75%] md:w-[40%] h-full bg-white z-50 transform transition-transform duration-300 ${
             toggle ? "translate-x-0" : "-translate-x-full"
           }`}
         >
